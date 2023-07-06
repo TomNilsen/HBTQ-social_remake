@@ -1,0 +1,76 @@
+@mixin center {
+    margin: 0rem auto 0rem auto;
+    padding: 0rem;
+  }
+  
+  @mixin flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  @mixin flexcol {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin shadow {
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  }
+  
+  @mixin border($color: black) {
+    border: 1px solid $color;
+  }
+  
+  @mixin h-W($h: 100%, $w: 100%) {
+    height: $h;
+    width: $w;
+  }
+  
+  @mixin m-p($m: 1rem, $p: 1rem) {
+    margin: $m;
+    padding: $p;
+  }
+  
+  @mixin button(
+    $c: black,
+    $b: white,
+    $hc: black,
+    $hb: lightgrey,
+    $ac: white,
+    $ab: darkgrey
+  ) {
+    color: $c;
+    background-color: $b;
+    border: none;
+    &:hover {
+      color: $hc;
+      background-color: $hb;
+    }
+    &:active {
+      color: $ac;
+      background-color: $ab;
+    }
+  }
+
+  @mixin info-button(
+    $c: white,
+    $b: #007BD9,
+    $hc: white,
+    $hb: #3793da,
+    $ac: white,
+    $ab: #0a497a
+  ) {
+    color: $c;
+    background-color: $b;
+    border: none;
+    &:hover {
+      color: $hc;
+      background-color: $hb;
+    }
+    &:active {
+      color: $ac;
+      background-color: $ab;
+    }
+  }
+  

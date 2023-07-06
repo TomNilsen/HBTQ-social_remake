@@ -1,0 +1,633 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: url(https://images.unsplash.com/photo-1562591981-b262d690a0c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1603&q=80) no-repeat fixed;
+  background-size: 100%;
+  background-color: white;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0rem;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+header h1 {
+  margin: 0rem;
+  padding: 0rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header h1 img {
+  height: 4rem;
+}
+header div {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header div img {
+  margin: 0rem;
+  padding: 0rem;
+  width: 4rem;
+}
+header div .menu-closed {
+  display: none;
+}
+header div .menu-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 2rem;
+  background-color: white;
+  width: 10rem;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+}
+header div .menu-open ul {
+  width: 100%;
+}
+header div .menu-open li h2 {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  padding: 1rem 0rem 1rem 0rem;
+  border-bottom: solid lightgrey;
+}
+header div .menu-open li button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 1rem 0rem 1rem 0rem;
+}
+header div .menu-open li button:hover {
+  color: white;
+  background-color: gray;
+}
+header div .menu-open li button:active {
+  color: white;
+  background-color: rgb(212, 209, 209);
+}
+header div .menu-open li:last-child {
+  border-bottom: none;
+}
+header div .menu-open li:last-child button {
+  color: red;
+}
+header div .menu-open li:last-child button:hover {
+  color: white;
+  background-color: red;
+}
+header div .menu-open li:last-child button:active {
+  color: white;
+  background-color: rgb(205, 50, 50);
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-closed {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay-closed {
+  display: none;
+}
+
+nav {
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li button {
+  padding: 1rem 2rem 1rem 2rem;
+  color: black;
+  background-color: white;
+  border: none;
+}
+nav ul li button:hover {
+  color: black;
+  background-color: lightgrey;
+}
+nav ul li button:active {
+  color: white;
+  background-color: darkgrey;
+}
+
+main {
+  background-color: none;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.list-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 66rem;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+}
+
+.list-card {
+  background-color: white;
+  margin: 1rem;
+  padding: 0rem;
+  border-radius: 10px;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  height: 30rem;
+  width: 20rem;
+  overflow: hidden;
+  text-align: center;
+}
+.list-card img {
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.list-card h3 {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+.list-card ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem;
+}
+.list-card ul li {
+  margin: 0rem 0.2rem 0rem 0.2rem;
+}
+.list-card button {
+  color: white;
+  background-color: #007BD9;
+  border: none;
+  border-radius: 0.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.list-card button:hover {
+  color: white;
+  background-color: #3793da;
+}
+.list-card button:active {
+  color: white;
+  background-color: #0a497a;
+}
+
+.map-page {
+  width: 50%;
+  background-color: white;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+}
+.map-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.map-page img {
+  width: 100%;
+}
+
+.create-page {
+  width: 50%;
+  background-color: none;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  padding: 2rem;
+}
+.create-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+form label {
+  margin-bottom: 0.2rem;
+}
+form input, form textarea {
+  margin-bottom: 1rem;
+}
+form button {
+  color: white;
+  background-color: #007BD9;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+form button:hover {
+  color: white;
+  background-color: #3793da;
+}
+form button:active {
+  color: white;
+  background-color: #0a497a;
+}
+
+.about-page {
+  width: 50%;
+  background-color: none;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  padding: 2rem;
+}
+.about-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /*
+      background-image: url(/src/images/inclousive-flag.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:contain;
+      height: 5rem;
+      align-items: center;
+      */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+.about-container p {
+  margin-bottom: 1rem;
+}
+.about-container h3 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.about-container ul {
+  list-style: disc;
+}
+.about-container ul li {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.event-page {
+  width: 50%;
+  background-color: none;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  padding: 2rem;
+}
+.event-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.event-page div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0rem auto 0rem auto;
+  padding: 0rem;
+  justify-content: space-around;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+.event-page div img {
+  width: 40%;
+}
+.event-page div ul {
+  width: 40%;
+}
+.event-page div ul li {
+  margin-bottom: 1rem;
+}
+.event-page div ul li h3 {
+  padding-top: 1.5rem;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+}
+footer h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .list-page {
+    max-width: 44rem;
+  }
+  .map-page {
+    width: 80%;
+  }
+  .create-page {
+    width: 80%;
+  }
+  .about-page {
+    width: 80%;
+  }
+  .event-page {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header .normal-nav {
+    display: none;
+  }
+  header div {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: none;
+  }
+  .mobile-menu-btn:hover div {
+    background-color: gray;
+  }
+  .mobile-menu-btn:active div {
+    background-color: rgb(212, 209, 209);
+  }
+  .mobile-menu-btn div {
+    display: block;
+    width: 1.2rem;
+    height: 0.15rem;
+    background-color: black;
+    margin: 0.15rem;
+  }
+  .mobile-closed {
+    display: none;
+  }
+  .mobile-nav {
+    /*
+    transition: display 2.4s;
+    transition-timing-function: ease-in;
+    */
+    display: block;
+    color: black;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 0rem;
+    left: 0rem;
+    width: 80%;
+  }
+  .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mobile-nav ul .mobile-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: none;
+  }
+  .mobile-nav ul .mobile-header img {
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .mobile-nav ul .mobile-header button {
+    margin: 0.5rem;
+    padding: 0rem;
+    color: black;
+    background-color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+  }
+  .mobile-nav ul .mobile-header button:hover {
+    color: gray;
+  }
+  .mobile-nav ul .mobile-header button:active {
+    color: rgb(212, 209, 209);
+  }
+  .mobile-nav ul li img {
+    width: 4rem;
+  }
+  .mobile-nav ul li h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: solid lightgrey;
+  }
+  .mobile-nav ul li button {
+    width: 100%;
+    background-color: white;
+    color: black;
+  }
+  .mobile-nav ul li button:hover {
+    color: white;
+    background-color: gray;
+  }
+  .mobile-nav ul li button:active {
+    color: white;
+    background-color: rgb(212, 209, 209);
+  }
+  .mobile-nav ul li:last-child {
+    border-bottom: none;
+  }
+  .mobile-nav ul li:last-child button {
+    color: red;
+  }
+  .mobile-nav ul li:last-child button:hover {
+    color: white;
+    background-color: red;
+  }
+  .mobile-nav ul li:last-child button:active {
+    color: white;
+    background-color: rgb(205, 50, 50);
+  }
+  .overlay-closed {
+    display: none;
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.5;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+  }
+  .list-page {
+    display: flex;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0rem auto 0rem auto;
+    padding: 0rem;
+  }
+  .list-card {
+    margin: 1rem 0rem 1rem 0rem;
+    height: 28rem;
+    width: 18rem;
+  }
+  .list-card img {
+    height: 70%;
+  }
+  .map-page {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .create-page {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .create-page form {
+    width: 18rem;
+  }
+  .about-page {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .about-page .about-container {
+    width: 18rem;
+  }
+  .event-page {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .event-page div {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+  }
+  .event-page div img {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .event-page div ul {
+    width: 100%;
+  }
+  footer {
+    align-items: center;
+  }
+}/*# sourceMappingURL=main.css.map */

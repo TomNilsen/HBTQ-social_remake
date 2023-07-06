@@ -1,0 +1,214 @@
+@media screen and (max-width: 768px) {
+  .list-page {
+    max-width: 44rem;
+  }
+  .map-page {
+    width: 80%;
+  }
+  .create-page {
+    width: 80%;
+  }
+  .about-page {
+    width: 80%;
+  }
+
+  .event-page {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    @include flexcol;
+
+    .normal-nav {
+      display: none;
+    }
+    div {
+      display: none;
+    }
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: none;
+    &:hover div {
+      background-color: gray;
+    }
+    &:active div {
+      background-color: rgb(212, 209, 209);
+    }
+    div {
+      display: block;
+      width: 1.2rem;
+      height: 0.15rem;
+      background-color: black;
+      margin: 0.15rem;
+    }
+  }
+
+  .mobile-closed {
+    display: none;
+  }
+
+  .mobile-nav {
+    /*
+    transition: display 2.4s;
+    transition-timing-function: ease-in;
+    */
+    display: block;
+    color: black;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 0rem;
+    left: 0rem;
+    width: 80%;
+    ul {
+      @include flexcol;
+      width: 100%;
+      .mobile-header {
+        @include flexrow;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: none;
+        img {
+          margin: 0.5rem 0.5rem 0rem 0.5rem;
+        }
+        button {
+          margin: 0.5rem;
+          padding: 0rem;
+          color: black;
+          background-color: white;
+          width: fit-content;
+          font-size: 1.5rem;
+          &:hover {
+            color: gray;
+          }
+          &:active {
+            color: rgb(212, 209, 209);
+          }
+        }
+      }
+
+      li {
+        img {
+          width: 4rem;
+        }
+        h2 {
+          width: 100%;
+          text-align: center;
+          font-weight: bold;
+          padding-bottom: 1rem;
+          border-bottom: solid lightgrey;
+        }
+        button {
+          width: 100%;
+          background-color: white;
+          color: black;
+          &:hover {
+            color: white;
+            background-color: gray;
+          }
+          &:active {
+            color: white;
+            background-color: rgb(212, 209, 209);
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+          button {
+            color: red;
+            &:hover {
+              color: white;
+              background-color: red;
+            }
+            &:active {
+              color: white;
+              background-color: rgb(205, 50, 50);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .overlay-closed {
+    display: none;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.5;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+  }
+
+  .list-page {
+    @include flexcol;
+    width: fit-content;
+    @include center;
+  }
+
+  .list-card {
+    margin: 1rem 0rem 1rem 0rem;
+    @include h-W($h: 28rem, $w: 18rem);
+    img {
+      height: 70%;
+    }
+  }
+
+  .map-page {
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .create-page {
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    form {
+      width: 18rem;
+    }
+  }
+
+  .about-page {
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    .about-container {
+      width: 18rem;
+    }
+  }
+
+  .event-page {
+    width: fit-content;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    div {
+      @include flexcol;
+      width: 18rem;
+      img {
+        width: 100%;
+        margin-bottom: 2.5rem;
+      }
+      ul {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    align-items: center;
+  }
+}

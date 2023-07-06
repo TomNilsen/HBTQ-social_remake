@@ -1,0 +1,38 @@
+.list-page {
+  @include flexrow;
+  width: fit-content;
+  max-width: 66rem;
+  @include center;
+}
+
+.list-card {
+  background-color: white;
+  @include m-p($p: 0rem);
+  border-radius: 10px;
+  @include shadow;
+  @include h-W($h: 30rem, $w: 20rem);
+  overflow: hidden;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+  }
+  h3 {
+    margin: 0.5rem;
+    font-weight: bold;
+  }
+  ul {
+    @include flexrow;
+    justify-content: center;
+    margin: 0.5rem;
+    li {
+      margin: 0rem 0.2rem 0rem 0.2rem;
+    }
+  }
+  button {
+    @include info-button;
+    border-radius: 0.2rem;
+    @include m-p($m: 0.5rem, $p: 0.5rem);
+  }
+}
